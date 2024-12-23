@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html 20-12-24</title>
+    <style>
+        div {
+            background-image: url("./assets/images/image1.jpg");
+            width: 200px;
+            height: 200px;
+        }
+    </style>    
+</head>
+
+<body>
+    <h4>Advance text formatting</h4>
+    <blockquote cite="https://code.visualstudio.com/">
+        <p>enclosed text is an extended quotation</p>
+    </blockquote>
+
+    <h4>Quote</h4>
+    <p><q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, odit?</q></p>
+
+    <h4>Abbreviations</h4>
+    <p>The <abbr title="HyperText Markup Language">Html</abbr> Blueprint of webpage.</p>
+
+    <h4>The address element</h4>
+    <p>use to wrap contact details</p>
+    <address>
+        Written by <a href="mailto:indhumathi.c02@gamil.com">Indhu</a>.<br>
+        Visit us at:<br>
+        Example.com<br>
+        Box 564, Disneyland<br>
+        UK
+    </address>
+
+    <h4>Superscript and subscript</h4>
+    <p>marking up items like dates, chemical formulae, and mathematical equations </p>
+    <p>25 <sup>th</sup> Dec <b>2024</b></p>
+    <p>O<sub>2</sub> is important</p>
+
+    <h4>Computer Code</h4>
+    <!-- <p>code - programming code ,pre-preformatted text with whitespace ,samp- output </p> -->
+    <code>
+        x = 5;
+        y = 6;
+        z = x + y;
+    </code>
+
+    <pre><code>const para = document.querySelector('p');
+
+        para.onclick = function() {
+          alert('Owww, stop poking me!');
+        }</code></pre>
+
+
+    <p>var- variable name</p>
+    <var>para</var>
+    <samp>65:67:78:34</samp>
+
+    <h4>times and dates</h4>
+    <time datetime="2016-01-20">20 January 2016</time>
+
+    <h4>Html Layout</h4>
+    <!-- <header>: Contains introductory content, like the site’s logo and navigation.
+        <nav>: Represents navigation links.
+        <main>: The primary content area of the document.
+        <section>: Represents a section of content (used for thematic grouping).
+        <article>: Represents a self-contained piece of content (could be a news article, blog post).
+        <aside>: Represents content related to the surrounding content, such as sidebars or additional information.
+        <footer>: Contains footer information, such as copyright. -->
+
+    <header>
+        <h1>Website Header</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>We are a company that provides excellent services...</p>
+        </section>
+
+        <article>
+            <h2>Latest News</h2>
+            <p>Read the latest updates from our blog...</p>
+        </article>
+
+        <aside>
+            <h3>Related Articles</h3>
+            <ul>
+                <li><a href="#">Article 1</a></li>
+                <li><a href="#">Article 2</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+    <h4>Line break & horizontal line</h4>
+    <p>Hi welcome, <br> indhu, </p>
+
+
+    <hr>
+    <h4>Image </h4>
+    <img src="./assets/images/image1.jpg" height="200" width="200" alt="Random Image">
+
+
+    <blockquote>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At similique eos distinctio quas odio veritatis
+            nulla illum exercitationem veniam a.</p>
+
+    </blockquote>
+
+    <img src="./assets/images/image1.jpg" title="this is a animal" width="200" height="200" alt="Image1">
+
+    <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+    " alt="dino image">
+
+    <!-- Figure and figure caption -->
+    <figure>
+        <img src="./assets/images/image1.jpg" alt="image 3" width="200" height="200">
+        <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, numquam?</figcaption>
+    </figure>
+    <div></div>
+
+    <!-- video and audio -->
+    <h4>video </h4>
+    <video src="./assets/images/video1.mp4" controls width="200" height="150" autoplay loop muted preload="auto">
+
+    </video>
+    <br>
+    <h4>audio </h4>
+    <audio controls>
+        <source src="./assets/images/AUD-20241220-WA0000.mp3" type="audio/mp3" />
+    </audio>
+
+
+<h2>Employee Information Table</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Position</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>101</td>
+            <td>John</td>
+            <td>Doe</td>
+            <td>Manager</td>
+            <td>35000</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Jane</td>
+            <td>Smith</td>
+            <td>Developer</td>
+            <td>45500</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>Tom</td>
+            <td>Brown</td>
+            <td>Designer</td>
+            <td>34000</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Total Employees: </td>
+            <td colspan="2">3</td>
+        </tr>
+    </tfoot>
+</table>
+
+
+
+</body>
+
+</html>
