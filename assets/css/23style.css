@@ -1,0 +1,25 @@
+.clsheading{
+    color: blue;
+    background-color: yellow;
+    font-size:28px;
+    text-transform: uppercase;
+}
+.clspara{
+    color: red;
+    font-size: 18px;
+}
+
+#header {
+    color: white;
+    background-color: #4CAF50;
+    text-align: center;
+    padding: 20px;
+}
+
+#special-button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
