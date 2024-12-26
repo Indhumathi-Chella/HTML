@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Shadow DOM Example</title>
+</head>
+<body>
+  <div id="shadow-host">MODE close</div> 
+
+  <script>
+    
+    var shadowHost = document.getElementById('shadow-host');
+
+    // mode:open , close
+    var shadow = shadowHost.attachShadow({ mode: 'open' });
+
+   
+    shadow.innerHTML = `
+      <style>
+        div {
+          background-color: #f4f4f4;
+          padding: 20px;
+          border: 2px solid #ddd;
+          border-radius: 10px;
+          width: 200px;
+          text-align: center;
+          font-family: Arial, sans-serif;
+        }
+
+        h2 {
+          font-size: 20px;
+          color: #333;
+        }
+
+        p {
+          font-size: 14px;
+          color: #666;
+        }
+
+        button {
+          background-color: #4CAF50;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        button:hover {
+          background-color: #45a049;
+        }
+      </style>
+      <div>
+        <h2>HTML</h2>
+        <p>This is a HTML course click and explore more!</p>
+        <button>Click me</button>
+      </div>
+    `;
+  </script>
+</body>
+</html>

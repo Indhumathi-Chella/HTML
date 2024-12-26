@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Event Example</title>
+    <style>
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            border: 2px solid #ccc;
+            transition: background-color 0.3s;
+        }
+
+        input:focus {
+            background-color: lightyellow;
+            border-color: #4CAF50;
+        }
+
+        #message {
+            font-size: 16px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Focus Event Example</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <p id="message"></p>
+
+    <script>
+        const inputField = document.getElementById("name");
+        const message = document.getElementById("message");
+
+        // Focus event listener
+        inputField.addEventListener("focus", function () {
+            message.textContent = "Input field is focused!";
+            // console.log("It is focused!");
+        });
+
+        inputField.addEventListener("blur", function () {
+            message.textContent = "";
+        });
+    </script>
+
+</body>
+
+</html>

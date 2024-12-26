@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Animation With Examples</title>
+    <style>
+        @keyframes changeColor {
+            0% {
+                color: yellow;
+            }
+
+            50% {
+                color: blueviolet;
+            }
+
+            100% {
+                color: blue;
+            }
+        }
+
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            animation: changeColor 2s linear infinite;
+            animation-direction: reverse;
+        }
+
+        p {
+            font-size: 40px;
+            text-align: center;
+            animation: changeColor 3s linear infinite;
+            animation-direction: normal;
+            /* animation-duration: 5s; */
+            animation-iteration-count: 3;
+            animation-play-state: paused;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>This is Indhu</h1>
+    <p>Welcome to Aspire Systems</p>
+
+    <h2 id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, cupiditate.</h2>
+
+    <div id="output"></div>
+
+    <script>
+        // Get the textarea element and output div
+        const para = document.getElementById('para');
+        const output = document.getElementById('output');
+
+        // Event listener for 'copy' event
+        para.addEventListener('cut', function (event) {
+            output.textContent = "You copied some text!";
+        });
+
+
+    </script>
+   
+
+</body>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: whitesmoke;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 400px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid black;
+      border-radius: 4px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background-color: green;
+    }
+
+    input:focus {
+      border-color: green;
+      outline: none;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .success {
+      color: green;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    
+    <form id="loginForm">
+      <label for="username">Username *:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      
+      <label for="password">Password *:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      
+      <input type="submit" value="Login">
+    </form>
+
+    <p id="message" class="error"></p>
+  </div>
+
+  <script>
+    const form = document.getElementById("loginForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); 
+
+      
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      //validation 
+      if (username === "indhu" && password === "123456") {
+        message.textContent = "Login successful!";
+        message.classList.remove("error");
+        message.classList.add("success");
+      } else {
+        message.textContent = "Invalid username or password. Please try again.";
+        message.classList.remove("success");
+        message.classList.add("error");
+      }
+    });
+  </script>
+
+</body>
+</html>

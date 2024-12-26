@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Print Events Example</title>
+</head>
+<body>
+
+  <h1>Print Events Example</h1>
+  <p>Click the button below to print the page.</p>
+  <button onclick="window.print()">Print Page</button>
+
+  <p class="message"></p>
+
+  <script>
+    const message = document.querySelector('.message');
+    //  beforeprint event
+    window.addEventListener('beforeprint', () => {
+      message.textContent = 'Before print'; 
+      // console.log('Before print event triggered!');
+    });
+
+    //  afterprint event
+    window.addEventListener('afterprint', () => {
+      message.textContent = 'After print'; 
+      // console.log('After print event triggered!');
+    });
+  </script>
+
+</body>
+</html>

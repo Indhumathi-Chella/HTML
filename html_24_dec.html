@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dec24</title>
+</head>
+
+<body>
+    <h4>Welcome to the DOM Example</h4>
+
+    <!-- Paragraph that will be modified -->
+    <p id="myParagraph">Welcome All.</p>
+
+    <button id="changeTextButton">Change Text</button>
+
+    <h4>HTML Element Interface</h4>
+    <p class="textcontent">What is Html stands for?</p>
+    <button id="change">Change Text</button>
+    <hr>
+    <!-- creating new elements -->
+    <h4>Add Element</h4>
+    <button id="addpara">Add elements</button>
+    <hr>
+    <!-- queryselector  -->
+
+    <h2 class="heading">Query selector</h2>
+    <button id="changeTextButton">Click Me</button>
+    <hr>
+
+    <!-- image -->
+    <!-- Initial image -->
+    <h4 class="imghead">Image</h4>
+    <img id="image" src="./assets/images/image2.jfif" alt="Initial Image" width="300">
+
+    <!-- Button to change the image -->
+    <button id="changeImageButton">Change Image</button>
+    <hr>
+
+    <!-- link -->
+    <a id="link" href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model#html_dom"
+        target="_blank">MDN Link</a>
+
+    <button id="changeLink">Change Link</button>
+    
+
+     <!-- clipboard starts -->
+     <h1>Clipboard Events Example</h1>
+
+     <textarea id="textArea" placeholder="Typehere..." rows="4" ></textarea>
+ 
+     <p id="status">No clipboard event yet</p>
+ 
+     <script>
+ 
+         const textArea = document.getElementById('textArea');
+         const status = document.getElementById('status');
+ 
+ 
+         textArea.addEventListener('copy', () => {
+             status.textContent = 'Text copied successfull!';
+         });
+ 
+ 
+         textArea.addEventListener('cut', () => {
+             status.textContent = 'Text cut successfull!';
+         });
+ 
+ 
+         textArea.addEventListener('paste', () => {
+             status.textContent = 'Text pasted successfull!';
+         });
+     </script>
+
+
+
+
+
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
