@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Custom Element</title>
+</head>
+<body>
+
+  <h1>Custom Greeting Element</h1>
+
+  <!--custom element -->
+  <greeting-message></greeting-message>
+
+  <script>
+   
+    class GreetingMessage extends HTMLElement {
+      constructor() {
+        super();  // Always call super() first in the constructor.
+        this.innerHTML = "<p>Hello, welcome to my website!</p>";  
+      }
+    }
+
+   [[-90-
+    customElements.define('greeting-message', GreetingMessage);
+  </script>
+
+</body>
+</html>

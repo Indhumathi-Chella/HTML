@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Worker Example</title>
+</head>
+<body>
+    <button onclick="startWorker()">Start Worker</button>
+    <p id="result"></p>
+
+    <script>
+        function startWorker() { 
+            var workerBlob = new Blob([`
+                onmessage = function(e) {
+                    let result = 0;
+                    for (let i = 0; i < 1e7; i++) result += i;  // Simple task for the worker
+                    postMessage(result);  // Send the result back to the main thread
+                }
+            `], { type: 'application/javascript' });
+
+            // Create a worker 
+            var worker = new Worker(URL.createObjectURL(workerBlob));
+
+            // Send a message to the worker
+            worker.postMessage('start');
+
+            //  result from the worker
+            worker.onmessage = function(e) {
+                document.getElementById('result').textContent = ': ' + e.data;
+                worker.terminate();  
+            };
+        }
+    </script>
+</body>
+</html>

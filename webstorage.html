@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage </title>
+</head>
+
+<body>
+
+    <h1>Session Storage </h1>
+
+    <input type="text" id="sessionInput" placeholder="Enter text for SessionStorage">
+    <button onclick="saveToSession()">Save</button>
+    <p id="sessionOutput"></p>
+
+    <h1>Local Storage </h1>
+
+    <input type="text" id="localInput" placeholder="Enter text for LocalStorage">
+    <button onclick="saveToLocal()">Save</button>
+    <p id="localOutput"></p>
+
+    <script>
+        
+        var localOutput = document.getElementById('localOutput');
+        var sessionOutput = document.getElementById('sessionOutput');
+
+        window.onload = function () {
+            // Load data localStorage
+            var localSavedData = localStorage.getItem('localData');
+            if (localSavedData) {
+                localOutput.textContent = 'load data in LocalStorage: ' + localSavedData;
+            }
+
+            // Load data sessionStorage
+            var sessionSavedData = sessionStorage.getItem('sessionData');
+            if (sessionSavedData) {
+                sessionOutput.textContent = 'load data in SessionStorage: ' + sessionSavedData;
+            }
+        }
+
+        // Save input data to localStorage
+        function saveToLocal() {
+            var inputValue = document.getElementById('localInput').value;
+            localStorage.setItem('localData', inputValue);
+            localOutput.textContent = 'Saved data in LocalStorage: ' + inputValue;
+        }
+
+        // Save input data to sessionStorage
+        function saveToSession() {
+            var inputValue = document.getElementById('sessionInput').value;
+            sessionStorage.setItem('sessionData', inputValue);
+            sessionOutput.textContent = 'Saved data in SessionStorage: ' + inputValue;
+        }
+    </script>
+
+</body>
+
+</html>

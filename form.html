@@ -98,15 +98,15 @@
   </div>
 
   <script>
-    const form = document.getElementById("loginForm");
-    const message = document.getElementById("message");
+    var form = document.getElementById("loginForm");
+    var message = document.getElementById("message");
 
     form.addEventListener("submit", function(event) {
       event.preventDefault(); 
 
       
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
 
       //validation 
       if (username === "indhu" && password === "123456") {

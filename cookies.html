@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Example</title>
+</head>
+<body>
+    <!-- cookie Example
+    permanent storage,only modify manually -->
+    <input type="text" id="username" placeholder="Enter your name">
+    <button onclick="saveName()">Save Name</button>
+    <h2 id="greeting"></h2>
+ 
+    <script>
+        var greeting =document.getElementById('greeting');
+        if (document.cookie) {
+            greeting.textContent = 'Get From cookies, ' + document.cookie.split('=')[1] + '!';
+        }
+       
+        function saveName() {
+            var username = document.getElementById('username').value;
+            document.cookie = "username=" +username + "; max-age=604800"; // 7 days
+            greeting.textContent = 'Hello, ' + username + '!';
+        }
+    </script>
+ 
+</body>
+</html>
+ 

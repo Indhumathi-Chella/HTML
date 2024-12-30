@@ -14,7 +14,7 @@
   <p class="message"></p>
 
   <script>
-    const message = document.querySelector('.message');
+    var message = document.querySelector('.message');
     //  beforeprint event
     window.addEventListener('beforeprint', () => {
       message.textContent = 'Before print'; 
