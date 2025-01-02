@@ -31,17 +31,6 @@ btn.addEventListener('click', function () {
 });
 
 
-// query selector
-
-
-var btns = document.querySelector('#changeTextButton');
-
-btns.addEventListener('click', function () {
-    var heading = document.querySelector('.heading');
-    console.log(heading);
-    heading[0].textContent = 'Text has been changed!';
-});
-
 // image
 // Select the image element and the button
 var img = document.getElementById('image');
@@ -63,4 +52,3 @@ btnLink.addEventListener('click', function () {
 });
 
 
-// Events

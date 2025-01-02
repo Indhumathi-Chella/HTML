@@ -27,7 +27,7 @@
 
             //  result from the worker
             worker.onmessage = function(e) {
-                document.getElementById('result').textContent = ': ' + e.data;
+                document.getElementById('result').textContent = 'Sum: ' + e.data;
                 worker.terminate();  
             };
         }

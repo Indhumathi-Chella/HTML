@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click and Double Click Events</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 50px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 18px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">Click or Double Click Me!</div>
+
+    <script>
+        const box = document.getElementById('box');
+
+        // Click event
+        box.addEventListener('click', function() {
+            box.textContent = 'Box clicked!';
+            box.style.backgroundColor = 'green';
+
+        });
+
+        // Double click event
+        box.addEventListener('dblclick', function() {
+            box.textContent = 'Box double-clicked!';
+            box.style.backgroundColor = 'red';
+        });
+    </script>
+
+</body>
+</html>

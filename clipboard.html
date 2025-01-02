@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clipboard</title>
+</head>
+<body>
+    <!-- clipboard starts -->
+    <h1>Clipboard Events Example</h1>
+
+    <textarea id="textArea" placeholder="Typehere..." rows="4" ></textarea>
+
+    <p id="status">No clipboard event yet</p>
+
+    <script>
+
+        const textArea = document.getElementById('textArea');
+        const status = document.getElementById('status');
+
+
+        textArea.addEventListener('copy', () => {
+            status.textContent = 'Text copied successfull!';
+        });
+
+
+        textArea.addEventListener('cut', () => {
+            status.textContent = 'Text cut successfull!';
+        });
+
+
+        textArea.addEventListener('paste', () => {
+            status.textContent = 'Text pasted successfull!';
+        });
+    </script>
+</body>
+</html>

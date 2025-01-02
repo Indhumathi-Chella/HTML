@@ -19,15 +19,26 @@
     <p class="textcontent">What is Html stands for?</p>
     <button id="change">Change Text</button>
     <hr>
-    <!-- creating new elements -->
-    <h4>Add Element</h4>
-    <button id="addpara">Add elements</button>
-    <hr>
+
     <!-- queryselector  -->
 
     <h2 class="heading">Query selector</h2>
-    <button id="changeTextButton">Click Me</button>
+    <button id="changeHeading">Click Me</button>
     <hr>
+
+    <script>
+
+        // query selector
+      var btns = document.querySelector('#changeHeading');
+
+        btns.addEventListener('click', function () {
+            var heading = document.querySelector('.heading');
+            console.log(heading);
+            heading.textContent = 'Text has been changed!';
+        });
+
+
+    </script>
 
     <!-- image -->
     <!-- Initial image -->
@@ -43,39 +54,10 @@
         target="_blank">MDN Link</a>
 
     <button id="changeLink">Change Link</button>
-    
 
-     <!-- clipboard starts -->
-     <h1>Clipboard Events Example</h1>
-
-     <textarea id="textArea" placeholder="Typehere..." rows="4" ></textarea>
- 
-     <p id="status">No clipboard event yet</p>
- 
-     <script>
- 
-         var textArea = document.getElementById('textArea');
-         var status = document.getElementById('status');
- 
- 
-         textArea.addEventListener('copy', () => {
-             status.textContent = 'Text copied successfull!';
-         });
- 
- 
-         textArea.addEventListener('cut', () => {
-             status.textContent = 'Text cut successfull!';
-         });
- 
- 
-         textArea.addEventListener('paste', () => {
-             status.textContent = 'Text pasted successfull!';
-         });
-     </script>
-
-
-
-
+    <!-- creating new elements -->
+    <h4>Add Element</h4>
+    <button id="addpara">Add elements</button>
 
 
     <script src="./assets/js/script.js"></script>

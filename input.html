@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Event</title>
+    <style>
+        input {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        .output {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Input Event Example</h1>
+    <label for="textInput">Type something:</label>
+    <input type="text" id="textInput" placeholder="Start typing...">
+    <div class="output" id="output">Character count: 0</div>
+
+    <script>
+        var inputField = document.getElementById('textInput');
+        var outputDiv = document.getElementById('output');
+        inputField.addEventListener('input', function () {
+            var inputLength = inputField.value.length;
+            outputDiv.textContent = 'Character count: ' + inputLength;
+        });
+    </script>
+
+</body>
+
+</html>

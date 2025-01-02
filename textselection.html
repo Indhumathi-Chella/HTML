@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Selection Event Example</title>
+</head>
+
+<body>
+    <div>
+        Enter and select text here:<br /><textarea id="my-text" rows="2" cols="20"></textarea>
+    </div>
+    <div>selectionStart: <span id="start"></span></div>
+    <div>selectionEnd: <span id="end"></span></div>
+    <div>selectionDirection: <span id="direction"></span></div>
+    
+
+
+    <script>
+        var myInput = document.getElementById("my-text");
+
+        myInput.addEventListener("selectionchange", () => {
+            document.getElementById("start").textContent = myInput.selectionStart;
+            document.getElementById("end").textContent = myInput.selectionEnd;
+            document.getElementById("direction").textContent = myInput.selectionDirection;
+        });
+
+
+    </script>
+
+</body>
+
+</html>

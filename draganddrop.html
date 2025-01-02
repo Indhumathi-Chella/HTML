@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Drag and Drop</title>
+    <style>
+        #dragElement {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            cursor: pointer;
+        }
+
+        #dropArea {
+            width: 200px;
+            height: 200px;
+            border: 2px dashed #3498db;
+            margin-top: 20px;
+            text-align: center;
+            line-height: 200px;
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="dragElement" draggable="true">Drag Me</div>
+    <div id="dropArea">Drop Here</div>
+
+    <script>
+        // Get the elements
+        const dragElement = document.getElementById('dragElement');
+        const dropArea = document.getElementById('dropArea');
+
+        // Allow the element to be dragged
+        dragElement.ondragstart = function(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        };
+
+        // Allow dropping in the drop area
+        dropArea.ondragover = function(event) {
+            event.preventDefault();  // Necessary to allow the drop
+        };
+
+        // Handle the drop
+        dropArea.ondrop = function(event) {
+            event.preventDefault();
+            const draggedId = event.dataTransfer.getData("text");
+            const draggedElement = document.getElementById(draggedId);
+            dropArea.appendChild(draggedElement);  // Move the dragged element
+        };
+    </script>
+
+</body>
+</html>
