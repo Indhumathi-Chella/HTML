@@ -37,7 +37,7 @@
     </ul>
     <!-- list-style-position = "inside outside " list-style-type: square;-->
     <hr>
-    <!-- Ordered List  -->quisquam  
+    <!-- Ordered List  -->
     <!-- type = A , a, I, i,1 -->
     <h4>ordered List</h4>
     <ol type="A">
@@ -74,7 +74,7 @@
     <!-- class can be used by multiple elements, while id should be unique to one element per page. -->
 
 
-    <h3 class="clsheading">Structuring content</h3>
+    <h3 class="clsheading">HTML Class</h3>
     <p class="clspara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ipsam ab libero totam aperiam
         dicta ut, accusamus
         sint vero ea. Aspernatur molestias eum voluptatem! Illo blanditiis assumenda obcaecati? Quasi delectus eveniet
@@ -97,12 +97,19 @@
     <hr>
 
     <!-- iframe - used embed another Html document into the current document-->
-    <iframe src="https://www.flipkart.com/" frameborder="0"></iframe>
+    <iframe src="https://www.flipkart.com/" frameborder="0"></iframe><hr>
 
     <!-- Html JavaScript -->
+    <h2 class="heading">HTML JS</h2>
+    <button id="alert">Click Me</button>
+    
+
     <script>
-        alert("Hello World!");
+        document.getElementById('alert').addEventListener('click', function () {
+            alert("Button clicked");
+        });
     </script>
+
 
 
 </body>

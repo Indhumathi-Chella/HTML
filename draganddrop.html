@@ -33,8 +33,8 @@
 
     <script>
         // Get the elements
-        const dragElement = document.getElementById('dragElement');
-        const dropArea = document.getElementById('dropArea');
+        var dragElement = document.getElementById('dragElement');
+        var dropArea = document.getElementById('dropArea');
 
         // Allow the element to be dragged
         dragElement.ondragstart = function(event) {
@@ -49,8 +49,8 @@
         // Handle the drop
         dropArea.ondrop = function(event) {
             event.preventDefault();
-            const draggedId = event.dataTransfer.getData("text");
-            const draggedElement = document.getElementById(draggedId);
+            var draggedId = event.dataTransfer.getData("text");
+            var draggedElement = document.getElementById(draggedId);
             dropArea.appendChild(draggedElement);  // Move the dragged element
         };
     </script>

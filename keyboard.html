@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keyboard Events</title>
 </head>
+
 <body>
     <h2>Keyboard Event</h2>
     <input type="text" id="keyboardInput" placeholder="Press any key...">
@@ -15,20 +17,21 @@
         const output = document.getElementById('output');
 
         // Keydown 
-        inputField.addEventListener('keydown', function(event) {
+        inputField.addEventListener('keydown', function (event) {
             output.textContent = 'Keydown: ' + event.key;
         });
 
         // Keypress
-        inputField.addEventListener('keypress', function(event) {
+        inputField.addEventListener('keypress', function (event) {
             output.textContent = 'Keypress: ' + event.key;
         });
 
         // Keyup 
-        inputField.addEventListener('keyup', function(event) {
+        inputField.addEventListener('keyup', function (event) {
             output.textContent = 'Keyup: ' + event.key;
         });
     </script>
 
 </body>
+
 </html>

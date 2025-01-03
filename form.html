@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,18 +80,19 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="login-container">
     <h2>Login</h2>
-    
+
     <form id="loginForm">
       <label for="username">Username *:</label>
       <input type="text" id="username" name="username" placeholder="Enter your username" required>
-      
+
       <label for="password">Password *:</label>
       <input type="password" id="password" name="password" placeholder="Enter your password" required>
-      
+
       <input type="submit" value="Login">
     </form>
 
@@ -101,10 +103,10 @@
     var form = document.getElementById("loginForm");
     var message = document.getElementById("message");
 
-    form.addEventListener("submit", function(event) {
-      event.preventDefault(); 
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-      
+
       var username = document.getElementById("username").value;
       var password = document.getElementById("password").value;
 
@@ -122,4 +124,5 @@
   </script>
 
 </body>
+
 </html>

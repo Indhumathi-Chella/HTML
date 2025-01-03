@@ -10,7 +10,7 @@
     <p id="result"></p>
 
     <script>
-        function startWorker() { 
+        function startWorker() {
             var workerBlob = new Blob([`
                 onmessage = function(e) {
                     let result = 0;
@@ -26,9 +26,9 @@
             worker.postMessage('start');
 
             //  result from the worker
-            worker.onmessage = function(e) {
+            worker.onmessage = function (e) {
                 document.getElementById('result').textContent = 'Sum: ' + e.data;
-                worker.terminate();  
+                worker.terminate();
             };
         }
     </script>

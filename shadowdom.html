@@ -6,15 +6,10 @@
 </head>
 <body>
   <div id="shadow-host">MODE close</div> 
-
   <script>
-    
     var shadowHost = document.getElementById('shadow-host');
-
     // mode:open , close
     var shadow = shadowHost.attachShadow({ mode: 'open' });
-
-   
     shadow.innerHTML = `
       <style>
         div {

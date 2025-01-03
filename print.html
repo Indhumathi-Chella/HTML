@@ -10,21 +10,16 @@
   <h1>Print Events Example</h1>
   <p>Click the button below to print the page.</p>
   <button onclick="window.print()">Print Page</button>
-
   <p class="message"></p>
-
   <script>
     var message = document.querySelector('.message');
     //  beforeprint event
     window.addEventListener('beforeprint', () => {
       message.textContent = 'Before print'; 
-      // console.log('Before print event triggered!');
     });
-
     //  afterprint event
     window.addEventListener('afterprint', () => {
-      message.textContent = 'After print'; 
-      // console.log('After print event triggered!');
+      message.textContent = 'After print';  
     });
   </script>
 

@@ -14,21 +14,14 @@
     <div>selectionStart: <span id="start"></span></div>
     <div>selectionEnd: <span id="end"></span></div>
     <div>selectionDirection: <span id="direction"></span></div>
-    
-
-
     <script>
         var myInput = document.getElementById("my-text");
-
         myInput.addEventListener("selectionchange", () => {
             document.getElementById("start").textContent = myInput.selectionStart;
             document.getElementById("end").textContent = myInput.selectionEnd;
             document.getElementById("direction").textContent = myInput.selectionDirection;
         });
-
-
     </script>
-
 </body>
 
 </html>
