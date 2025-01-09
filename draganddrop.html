@@ -41,9 +41,9 @@
             event.dataTransfer.setData("text", event.target.id);
         };
 
-        // Allow dropping in the drop area
+        // dropping in  drop area
         dropArea.ondragover = function(event) {
-            event.preventDefault();  // Necessary to allow the drop
+            event.preventDefault();  
         };
 
         // Handle the drop
@@ -51,7 +51,7 @@
             event.preventDefault();
             var draggedId = event.dataTransfer.getData("text");
             var draggedElement = document.getElementById(draggedId);
-            dropArea.appendChild(draggedElement);  // Move the dragged element
+            dropArea.appendChild(draggedElement);  
         };
     </script>
 
